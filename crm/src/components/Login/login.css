@@ -1,0 +1,84 @@
+.content {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.wrapper {
+  display: flex;
+  gap: 20px;
+  color: var(--primary-color);
+}
+.wrapper > h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.content__left {
+  flex: 0.7;
+  padding: 20px;
+}
+.content__right {
+  flex: 0.3;
+}
+.content__right img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+.form {
+  width: 65%;
+  margin: 30px auto;
+}
+.form__title {
+  font-size: 27px;
+  font-weight: 600;
+}
+label {
+  font-size: 13px;
+}
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+  color: #666666;
+  font-family: "Poppins", sans-serif;
+}
+.input {
+  padding: 10px 5px;
+  border: 1px solid #666666;
+  border-radius: 8px;
+}
+.btn__submit {
+  width: 100%;
+  margin: 50px 0;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #c3c3c3;
+  transition: all 0.3s ease;
+  border-radius: 64px;
+}
+.btn__submit:hover {
+  background-color: #949494;
+}
+.login__nav {
+  text-align: center;
+  font-size: 14px;
+}
+.link {
+  color: #244779;
+  margin-left: 5px;
+}
+.policy {
+  font-size: 12px;
+  text-align: center;
+  color: #676b5f;
+}
