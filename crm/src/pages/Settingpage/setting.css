@@ -1,0 +1,66 @@
+.settingpage {
+  flex: 1;
+  padding: 20px;
+}
+.tab__setting {
+  min-width: 100%;
+}
+.setting__content {
+  background-color: #fafbfc;
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+.tab__setting--btn {
+  padding: 0 10px;
+}
+.edit__form {
+  padding: 20px;
+}
+.edit__input--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: "poppins", sans-serif;
+  margin-top: 10px;
+  max-width: 500px;
+}
+.edit__input--wrapper > label {
+  color: #5e5e5e;
+  font-size: 18px;
+}
+.setting__input {
+  border: 1px solid #3e3e3e;
+  border-radius: 12px;
+  padding: 15px 10px;
+  font-size: 16px;
+  width: 100%;
+}
+.tooltip {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.tooltip__container {
+  position: absolute;
+  right: -50px;
+  bottom: 5px;
+}
+.tooltip__content {
+  position: absolute;
+  width: max-content;
+  bottom: -35px;
+  right: -235px;
+  padding: 10px;
+  border-radius: 13px;
+  font-size: 14px;
+  color: #7c7c7c;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.edit__form > .btn__wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: end;
+}

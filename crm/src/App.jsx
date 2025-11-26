@@ -2,12 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import Sidebar from "./components/Sidebar/Sidebar";
-import DashboardPage from "./pages/DashboardPage";
+import DashboardPage from "./pages/Dashboard/DashboardPage";
 import ContactPage from "./pages/ContactPage";
 import AnalyticsPage from "./pages/AnalyticsPage";
-import TeamsPage from "./pages/TeamsPage";
+import TeamsPage from "./pages/Team/TeamsPage";
 import ChatbotPage from "./pages/ChatbotPage";
-import SettingPage from "./pages/SettingPage";
+import SettingPage from "./pages/Settingpage/SettingPage";
 import "./App.css";
 import PagenotFound from "./pages/PagenotFound";
 

@@ -1,0 +1,106 @@
+.dashboard {
+  padding: 20px;
+  flex: 1;
+}
+.search {
+  border: 1px solid #b6b6b6;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #fbfbfb;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 250px;
+}
+
+.search__input {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  color: #b6b6b6;
+}
+.search__input:focus {
+  outline: none;
+}
+.search__input::placeholder {
+  color: #b6b6b6;
+}
+.tab {
+  border-bottom: 1px solid #b6b6b6;
+  padding: 5px 0;
+  max-width: 1120px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tab__content {
+  font-size: 14px;
+  color: #888888;
+  background-color: transparent;
+  border: none;
+}
+.tab__content--active {
+  color: var(--primary-color);
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+
+.tab__content--active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  bottom: -6px;
+  left: 0;
+}
+.ticket {
+  margin-top: 20px;
+}
+.ticket__card {
+  border: 1px solid #e7e7e7;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+.ticket__head,
+.ticket__content {
+  display: flex;
+  justify-content: space-between;
+}
+.ticket__title {
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  margin-left: 40px;
+}
+
+.ticket__title::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #f8a534;
+  border-radius: 50%;
+  left: -40px;
+  top: -3px;
+}
+
+.ticket__date {
+  font-size: 12px;
+  font-weight: 500;
+  color: gray;
+}
+.ticket__content {
+  margin-top: 10px;
+}
+.ticket__content--title {
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.ticket__time {
+  font-weight: 600;
+}
