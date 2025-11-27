@@ -1,0 +1,61 @@
+.userchat {
+  flex: 0.2;
+  padding: 10px;
+}
+.userchat__header {
+  padding: 10px;
+}
+.userchats {
+  margin-top: 55px;
+}
+.userchats__tab {
+  font-size: 14px;
+  color: #888888;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.userchats__tab::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #888888;
+  border-radius: 2px;
+  bottom: -6px;
+  left: 0;
+}
+.user__cards {
+  margin-top: 10px;
+}
+.user__card {
+  display: flex;
+  padding: 8px;
+  gap: 5px;
+  max-height: 46px;
+  border-radius: 27px;
+  margin-bottom: 10px;
+}
+.user__card.active {
+  background-color: #efefef;
+  position: relative;
+}
+.user__card.active::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  border-radius: 0 4px 4px 0;
+  height: 25px;
+  background-color: var(--primary-color);
+  left: -10px;
+  top: 10px;
+}
+.user__name .title {
+  font-size: 13px;
+  font-weight: 600;
+}
+.user__name .content {
+  color: #9a9b9d;
+  font-size: 14px;
+}

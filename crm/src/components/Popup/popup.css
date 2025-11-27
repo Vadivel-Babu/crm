@@ -1,0 +1,40 @@
+.popup {
+  background-color: #fafbfc;
+  border-radius: 23px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 10px;
+  position: absolute;
+}
+.popup__title {
+  font-size: 16px;
+  font-weight: 400;
+}
+.popup__action {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.btn--cancel,
+.btn--confirm {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 15px;
+  width: 140px;
+  transition: all 0.3s ease;
+}
+.btn--cancel {
+  background-color: white;
+  color: #afafaf;
+}
+.btn--cancel:hover {
+  background-color: #afafaf;
+  color: white;
+}
+
+.btn--confirm:hover {
+  background-color: rgb(21, 47, 78);
+  color: white;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderText from "../../components/HeaderText/HeaderText";
 import "./team.css";
+import User from "../../components/User/User";
 
 const TeamsPage = () => {
   const teamMembers = [
@@ -48,7 +49,7 @@ const TeamsPage = () => {
           {teamMembers.map((member, index) => (
             <tr key={index}>
               <td className="user-cell">
-                <img src={member.avatar} alt="avatar" className="avatar" />
+                <User name={member.name} />
               </td>
               <td>{member.name}</td>
 

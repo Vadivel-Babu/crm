@@ -1,0 +1,6 @@
+.contactpage {
+  flex: 1;
+  background-color: #fafbfc;
+  display: flex;
+  overflow: hidden;
+}

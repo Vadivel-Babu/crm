@@ -1,0 +1,92 @@
+.ticketchat {
+  flex: 0.5;
+  border-left: 1px solid #d1d6da;
+  border-right: 1px solid #d1d6da;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ticketchat__head {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d1d6da;
+  padding-bottom: 10px;
+}
+.ticketchat__title {
+  color: #86898c;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* .ticket__conversation {
+  background-color: coral;
+} */
+.ticketchat__date {
+  position: relative;
+  margin-bottom: 20px;
+}
+.ticketchat__date > hr {
+  border: 1px solid #d1d6da;
+}
+.chat__date {
+  color: #8c8e92;
+  font-size: 13px;
+  background-color: white;
+  width: max-content;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.chats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chat__sender {
+  align-self: flex-end;
+}
+.chat__sender .user__name {
+  text-align: right;
+}
+.user__name {
+  color: #5e9bd5;
+  font-size: 13px;
+  font-weight: 400;
+}
+.message {
+  color: #9a9b9d;
+  font-size: 14px;
+}
+.textarea {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #d1d6da;
+  position: relative;
+  margin-top: 20px;
+}
+.textarea > textarea {
+  resize: none;
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+.textarea > textarea::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.btn--send {
+  position: absolute;
+  background-color: transparent;
+  padding: 0;
+  bottom: 5px;
+  right: 10px;
+}
