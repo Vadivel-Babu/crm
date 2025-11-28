@@ -1,8 +1,15 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import "./popup.css";
 
 const Popup = ({ onCancel, onConfirm, position }) => {
   const ref = useRef();
+  const [width, setWidth] = useState(180);
+
+  useEffect(() => {
+    if (ref.current) {
+      setWidth(ref.current.offsetWidth);
+    }
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -21,7 +28,7 @@ const Popup = ({ onCancel, onConfirm, position }) => {
       ref={ref}
       style={{
         top: position.top - 35,
-        left: position.left,
+        left: position.left - width,
       }}
       className="popup"
     >

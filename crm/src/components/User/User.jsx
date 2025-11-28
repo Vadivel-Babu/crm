@@ -16,7 +16,7 @@ const User = ({ name = "" }) => {
         alignItems: "center",
       }}
     >
-      {user[0][0].toUpperCase()} {user[1] ? user[1][0]?.toUpperCase() : ""}
+      {user[0][0]?.toUpperCase()} {user[1] ? user[1][0]?.toUpperCase() : ""}
     </p>
   );
 };

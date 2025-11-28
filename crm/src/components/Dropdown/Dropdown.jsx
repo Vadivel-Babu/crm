@@ -15,6 +15,9 @@ const Dropdown = ({ items = [], selected, onSelect, type = "team" }) => {
           {type === "status" && <img src={ticket} alt="ticket" />}
           {type === "team" && <p>{selected?.label}</p>}
           {type === "status" && <p>Ticket status</p>}
+          {type === "designation" && (
+            <p style={{ color: "black" }}>{selected}</p>
+          )}
         </div>
         <img src={down} alt="down" />
       </div>
@@ -43,6 +46,22 @@ const Dropdown = ({ items = [], selected, onSelect, type = "team" }) => {
               className="dropdown__head"
               onClick={(e) => {
                 onSelect(item, e);
+                setOpen(false);
+              }}
+            >
+              <p>{item?.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
+      {type === "designation" && open && (
+        <div className="dropdown__options">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className="dropdown__head"
+              onClick={() => {
+                onSelect(item);
                 setOpen(false);
               }}
             >

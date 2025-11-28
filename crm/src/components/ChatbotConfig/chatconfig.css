@@ -1,4 +1,150 @@
 .chatconfig {
   flex: 0.4;
   display: flex;
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.card {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 23px;
+  padding: 20px;
+  height: max-content;
+  width: 400px;
+}
+.card__title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.colorpalette {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.colors {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+.headercolor .colors:first-child {
+  background-color: white;
+}
+.headercolor .colors:nth-child(2) {
+  background-color: rgb(0, 0, 0);
+}
+.headercolor .colors:last-child {
+  background-color: #33475b;
+}
+.choosecolor {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+}
+.chosen {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+  background-color: #33475b;
+}
+.color {
+  background-color: #f6f7f5;
+  border-radius: 9px;
+  border: none;
+  padding: 0 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.choosecolor .color:focus {
+  outline: none;
+}
+.backgroundcolor .colors:first-child {
+  background-color: white;
+}
+.backgroundcolor .colors:nth-child(2) {
+  background-color: rgb(0, 0, 0);
+}
+.backgroundcolor .colors:last-child {
+  background-color: #fafbfc;
+}
+.backgroundcolor + .choosecolor > .chosen {
+  background-color: #eeeeee;
+}
+.welcometext {
+  background-color: #f6f7f5;
+  border-radius: 9px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 230px;
+  margin-top: 5px;
+}
+.welcometext > p {
+  font-size: 11px;
+}
+.intro__form > label {
+  color: #505050;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.intro__input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #c3c3c3;
+  padding: 3px;
+  width: 100%;
+}
+.intro__input:focus {
+  outline: none;
+}
+.intro__input::placeholder {
+  color: black;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+.welcometext.welcomemessage {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.welcometext.welcomemessage > .welcometext {
+  display: flex;
+  max-width: 100%;
+  font-size: 14px;
+}
+.welcometext.welcomemessage > .welcometext > p {
+  max-width: 260px;
+}
+.welcomemessage > p {
+  text-align: right;
+  font-size: 10px;
+}
+.timer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.timer {
+  display: flex;
+  gap: 80px;
+  padding: 5px;
+}
+.timer:nth-child(2) {
+  background-color: #edf4f5;
+  width: max-content;
+}
+.timer__wrapper .btn--save {
+  font-size: 10px;
+  padding: 5px 0;
+  width: 90px;
+  align-self: flex-end;
+  border-radius: 8px;
 }
