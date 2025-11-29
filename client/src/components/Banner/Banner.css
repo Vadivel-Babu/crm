@@ -1,0 +1,9 @@
+.banner {
+  background-color: rgba(24, 77, 127, 0.121);
+  margin-top: 150px;
+}
+.banner--img {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}

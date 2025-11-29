@@ -1,0 +1,55 @@
+.analyticscard {
+  color: #00d907;
+  margin-top: 20px;
+}
+.analyticscard > h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.analytics__content {
+  font-size: 13px;
+  color: black;
+  max-width: 690px;
+}
+
+.analyticscard div {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  align-items: center;
+}
+.sec {
+  display: flex;
+  width: 200px;
+  overflow-x: visible;
+  padding: 5px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.analytics__percentage {
+  border: 1px solid rgba(91, 147, 255, 0.05);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: relative;
+}
+.progress-fill {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

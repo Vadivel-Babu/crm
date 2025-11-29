@@ -1,0 +1,54 @@
+.hero {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 100px;
+}
+.hero__right .title {
+  font-size: 54px;
+  max-width: 660px;
+}
+.hero__right .para {
+  max-width: 620px;
+  margin: 20px 0;
+}
+.actions {
+  display: flex;
+  gap: 25px;
+}
+.hero--btn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.hero--btn:first-child {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.hero--btn:last-child {
+  font-size: 22px;
+  color: var(--primary-color);
+}
+.hero__left {
+  position: relative;
+}
+.img {
+  position: absolute;
+}
+.img.card {
+  top: -25px;
+  right: -25px;
+}
+.img.calender {
+  bottom: -180px;
+  left: -150px;
+}
+.img.graph {
+  bottom: -80px;
+  right: -100px;
+}

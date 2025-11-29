@@ -1,7 +1,13 @@
+import Banner from "./components/Banner/Banner";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
     <>
-      <h1>hello client</h1>
+      <Navbar />
+      <Hero />
+      <Banner />
     </>
   );
 }

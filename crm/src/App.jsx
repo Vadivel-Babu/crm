@@ -4,7 +4,7 @@ import Signup from "./components/Signup/Signup";
 import Sidebar from "./components/Sidebar/Sidebar";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import ContactPage from "./pages/Contactcenter/ContactPage";
-import AnalyticsPage from "./pages/AnalyticsPage";
+import AnalyticsPage from "./pages/Analytics/AnalyticsPage";
 import TeamsPage from "./pages/Team/TeamsPage";
 import ChatbotPage from "./pages/Chatpage/ChatbotPage";
 import SettingPage from "./pages/Settingpage/SettingPage";
