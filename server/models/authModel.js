@@ -4,6 +4,7 @@ const authSchema = mongoose.Schema({
   name: {
     type: String,
     require: true,
+    unique: true,
   },
   email: {
     type: String,
@@ -15,6 +16,15 @@ const authSchema = mongoose.Schema({
     require: true,
     minLength: 4,
   },
+  role: {
+    type: String,
+    enum: ["admin", "member"],
+  },
+  passwordChangedAt: {
+    type: Date,
+    default: null,
+  },
+  createdAt: Date,
 });
 
-module.exports = mongoose.model("Auth", authSchema);
+module.exports = mongoose.model("AuthUser", authSchema);
