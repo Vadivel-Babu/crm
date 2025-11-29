@@ -2,7 +2,7 @@ import React from "react";
 import HeaderText from "../../components/HeaderText/HeaderText";
 import "./analytics.css";
 import Chart from "../../components/Chart/Chart";
-import AnalyticsCard from "../../components/analyticsCard/AnalyticsCard";
+import AnalyticsCard from "../../components/AnalyticsCard/AnalyticsCard";
 import AnalyticPercent from "../../components/AnalyticPercent/AnalyticPercent";
 
 const data = [
