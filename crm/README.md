@@ -46,5 +46,5 @@ This CRM supports **Admin & Team Members**, ticket management, messaging, analyt
 ## 👤 Default Admin Details
 
 Admin login credentials are stored in the backend in a file:
--name:admin
--password:1234
+-name: member1
+-password: 1234
