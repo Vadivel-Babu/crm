@@ -6,8 +6,8 @@ const getToken = require("../utils/generateToken.js");
 //handle registeration
 async function userRegister(req, res) {
   try {
-    const { name, email, password } = req.body;
-    const user = await AuthUser.findOne({ name, email });
+    const { firstname, lastname, email, password } = req.body;
+    const user = await AuthUser.findOne({ firstname, email });
     if (user) {
       return res.status(409).json({
         status: false,
@@ -20,7 +20,8 @@ async function userRegister(req, res) {
       const users = await AuthUser.find();
       if (users.length === 0) {
         const newUser = new AuthUser({
-          name,
+          firstname,
+          lastname,
           email,
           password: hashpassword,
           role: "admin",
@@ -32,7 +33,8 @@ async function userRegister(req, res) {
         });
       }
       const newUser = new AuthUser({
-        name,
+        firstname,
+        lastname,
         email,
         password: hashpassword,
         role: "member",
@@ -57,7 +59,7 @@ async function userLogin(req, res) {
   try {
     const { name, password } = req.body;
 
-    const user = await AuthUser.findOne({ name });
+    const user = await AuthUser.findOne({ firstname: name });
     console.log(user);
 
     if (!user) {
@@ -79,6 +81,7 @@ async function userLogin(req, res) {
       status: true,
       message: "login successsfully",
       token,
+      user,
     });
   } catch (error) {
     console.error(error);

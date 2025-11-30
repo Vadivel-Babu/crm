@@ -1,9 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/images/login.png";
 import "./signup.css";
+import { toast } from "react-toastify";
+import { registerUser } from "../../api/auth";
 
 const Signup = () => {
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setlastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
+  const handleRegister = async (e) => {
+    try {
+      e.preventDefault();
+      if (password !== confirmPassword) {
+        toast.error("Passwords do not match!");
+        return;
+      }
+      setLoading(true);
+      const data = await registerUser(firstname, lastname, email, password);
+
+      toast.success("Account created successfully!");
+      setLoading(false);
+      setEmail("");
+      setFirstName("");
+      setlastName("");
+      setPassword("");
+      setConfirmPassword("");
+      navigate("/login");
+      return true;
+    } catch (err) {
+      toast.error(err.response?.data?.message || "Signup failed!");
+      setLoading(false);
+      return false;
+    }
+  };
   return (
     <div className="login">
       <div className="container">
@@ -27,11 +61,20 @@ const Signup = () => {
                     <label className="lable" htmlFor="firstname">
                       First name
                     </label>
-                    <input type="text" className="input" name="name" id="" />
+                    <input
+                      onChange={(e) => setFirstName(e.target.value)}
+                      value={firstname}
+                      type="text"
+                      className="input"
+                      name="name"
+                      id=""
+                    />
                   </div>
                   <div className="input__wrapper">
                     <label htmlFor="lastname">Last name</label>
                     <input
+                      onChange={(e) => setlastName(e.target.value)}
+                      value={lastname}
                       type="text"
                       className="input"
                       name="lastname"
@@ -40,20 +83,31 @@ const Signup = () => {
                   </div>
                   <div className="input__wrapper">
                     <label htmlFor="Email">Email</label>
-                    <input type="text" className="input" name="Email" id="" />
+                    <input
+                      onChange={(e) => setEmail(e.target.value)}
+                      type="mail"
+                      className="input"
+                      name="Email"
+                      id=""
+                      value={email}
+                    />
                   </div>
                   <div className="input__wrapper">
                     <label htmlFor="Password">Password</label>
                     <input
-                      type="text"
+                      type="password"
                       className="input"
                       name="Password"
                       id=""
+                      onChange={(e) => setPassword(e.target.value)}
+                      value={password}
                     />
                   </div>
                   <div className="input__wrapper">
                     <label htmlFor="Confirm Password">Confirm Password</label>
                     <input
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      value={confirmPassword}
                       type="text"
                       className="input"
                       name="Confirm Password"
@@ -74,8 +128,12 @@ const Signup = () => {
                       </p>
                     </label>
                   </div>
-                  <button className="btn btn__submit" type="submit">
-                    Create an account
+                  <button
+                    onClick={(e) => handleRegister(e)}
+                    className="btn btn__submit"
+                    type="submit"
+                  >
+                    {loading ? "loading..." : "Create an account"}
                   </button>
                 </form>
               </div>

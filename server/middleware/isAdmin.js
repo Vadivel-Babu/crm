@@ -1,5 +1,4 @@
-// Middleware to check if user is admin
-exports.isAdmin = (req, res, next) => {
+const isAdmin = (req, res, next) => {
   try {
     if (!req.user) {
       return res.status(401).json({
@@ -24,3 +23,5 @@ exports.isAdmin = (req, res, next) => {
     });
   }
 };
+
+module.exports = isAdmin;

@@ -10,24 +10,94 @@ import ChatbotPage from "./pages/Chatpage/ChatbotPage";
 import SettingPage from "./pages/Settingpage/SettingPage";
 import "./App.css";
 import PagenotFound from "./pages/PagenotFound";
+import PublicRoute from "./components/PublicRoute";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useAuth } from "./context/AuthContext";
 
 function App() {
+  const { token } = useAuth();
   return (
     <>
       <div className="app">
-        <Sidebar />
+        {/* Show sidebar only if logged in */}
+        {token && <Sidebar />}
+
         <Routes>
-          {/* <Route path={"/login"} exact element={<Login />} />
-          <Route path={"/signup"} exact element={<Signup />} /> */}
-          <Route>
-            <Route path={"/"} exact element={<DashboardPage />} />
-            <Route path={"/contact"} exact element={<ContactPage />} />
-            <Route path={"/analytics"} exact element={<AnalyticsPage />} />
-            <Route path={"/chat"} exact element={<ChatbotPage />} />
-            <Route path={"/teams"} exact element={<TeamsPage />} />
-            <Route path={"/setting"} exact element={<SettingPage />} />
-          </Route>
-          <Route path={"*"} exact element={<PagenotFound />} />
+          {/* PUBLIC ROUTES */}
+          <Route
+            path="/login"
+            element={
+              <PublicRoute>
+                <Login />
+              </PublicRoute>
+            }
+          />
+
+          <Route
+            path="/signup"
+            element={
+              <PublicRoute>
+                <Signup />
+              </PublicRoute>
+            }
+          />
+
+          {/* PROTECTED ROUTES */}
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/contact"
+            element={
+              <ProtectedRoute>
+                <ContactPage />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/analytics"
+            element={
+              <ProtectedRoute>
+                <AnalyticsPage />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/chat"
+            element={
+              <ProtectedRoute>
+                <ChatbotPage />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/teams"
+            element={
+              <ProtectedRoute>
+                <TeamsPage />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/setting"
+            element={
+              <ProtectedRoute>
+                <SettingPage />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route path="*" element={<PagenotFound />} />
         </Routes>
       </div>
     </>

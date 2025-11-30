@@ -1,8 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/images/login.png";
+import { useState } from "react";
+import { loginUser } from "../../api/auth";
+import { toast } from "react-toastify";
 import "./login.css";
+import { useAuth } from "../../context/AuthContext";
 
 const Login = () => {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      const res = await loginUser(name, password);
+      console.log(res.user, res.token);
+      login(res.user, res.token);
+
+      toast.success("login succesfully");
+      navigate("/");
+    } catch (error) {
+      toast.error(err.response?.data?.message || "Signup failed!");
+      setLoading(false);
+    }
+  };
   return (
     <div className="login">
       <div className="container">
@@ -20,19 +44,32 @@ const Login = () => {
                     <label className="lable" htmlFor="name">
                       Username
                     </label>
-                    <input type="text" className="input" name="name" id="" />
+                    <input
+                      onChange={(e) => setName(e.target.value)}
+                      type="text"
+                      className="input"
+                      name="name"
+                      value={name}
+                      id=""
+                    />
                   </div>
                   <div className="input__wrapper">
                     <label htmlFor="password">Password</label>
                     <input
-                      type="text"
+                      type="password"
                       className="input"
                       name="password"
                       id=""
+                      onChange={(e) => setPassword(e.target.value)}
+                      value={password}
                     />
                   </div>
-                  <button className="btn btn__submit" type="submit">
-                    Log in
+                  <button
+                    onClick={handleSubmit}
+                    className="btn btn__submit"
+                    type="submit"
+                  >
+                    {loading ? "loading..." : "Log in"}
                   </button>
                   <p className="login__nav">
                     Don't have an account?

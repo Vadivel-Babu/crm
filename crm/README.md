@@ -1,16 +1,50 @@
-# React + Vite
+# 📌 CRM System (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured **Customer Relationship Management (CRM)** application built using the **MERN stack**.  
+This CRM supports **Admin & Team Members**, ticket management, messaging, analytics, and customizable settings.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 🔐 Authentication & Roles
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Admin & Member login
+- JWT-based authentication
+- Protected routes (React + Backend)
+- Forced logout when password changes
 
-## Expanding the ESLint configuration
+### 🎫 Ticket Management
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Create, assign, and manage support tickets
+- Filter by status (open, assigned, resolved)
+- Search by Ticket ID
+- Auto-reassign tickets to admin if member deleted
+
+### 💬 Messaging System
+
+- Ticket-based messaging between User ↔ Admin ↔ Member
+- Missed message calculation based on reply time
+- No real-time (normal request-based messaging)
+
+### 📊 Analytics
+
+- Total messages per week
+- Missed chats for last 10 weeks
+- Average response time
+- Resolved ticket percentage
+
+### ⚙️ Settings (Admin Only)
+
+- Change background color
+- Change header color
+- Set reply time (minutes)
+- Theme applied for all users
+
+---
+
+## 👤 Default Admin Details
+
+Admin login credentials are stored in the backend in a file:
+-name:admin
+-password:1234
