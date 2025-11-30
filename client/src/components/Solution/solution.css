@@ -1,0 +1,38 @@
+.solution__title {
+  font-size: 44px;
+  text-align: center;
+  margin: 100px auto 0 auto;
+  max-width: 670px;
+}
+.solution__para {
+  font-size: 18px;
+  max-width: 720px;
+  margin: 20px auto 20px auto;
+  text-align: center;
+}
+
+.solution__content {
+  background-color: white;
+  border: 1px solid rgba(111, 164, 215, 0.16);
+  border-radius: 24px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.solution__right {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+  margin-top: 20px;
+}
+.solution__right-title > h1 {
+  font-size: 24px;
+}
+.card1-btn {
+  margin-top: 50px;
+}

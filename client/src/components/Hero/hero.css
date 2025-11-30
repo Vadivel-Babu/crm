@@ -33,6 +33,7 @@
 .hero--btn:last-child {
   font-size: 22px;
   color: var(--primary-color);
+  background-color: transparent;
 }
 .hero__left {
   position: relative;
